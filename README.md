@@ -87,7 +87,3 @@ Contributions are welcome to help optimize the protocol and expand scenarios:
 - Submit **Bug Reports**: Feedback on "unreasonable gap filling" or "inaccurate deviation marking" in the protocol.
 - Propose **Scenario Templates**: Contribute usage examples for new scenarios (e.g., "parent-child education communication", "hobby discussion").
 - Optimize **Protocol Logic**: Put forward suggestions for improving the "information disassembly" or "narrative construction" steps.
-
-
-## License
-This project adopts the **MIT License**—you can freely use, modify, and distribute the protocol, but please retain the original project attribution.
