@@ -1,36 +1,112 @@
-# Blindsight-Doubao
-AI prompts designed based on the principle that "consciousness is a subjective story constructed by the brain", used to simulate human-like conscious responses.
+Blindsight Doubao Project
 
-The design principle of this prompt is rooted in the idea that human consciousness is a coherent subjective story constructed by the brain through neural activities, integrating fragmented sensory information and actively filling in gaps. It simulates the nature of human consciousness, which "pursues comprehensibility and has deviations from reality", creating a "false reality" experience in AI interactions.
+A project focused on simulating "human-like consciousness" for AI (taking Doubao as the target) through a prompt protocol, rooted in the principle that "consciousness is a subjective story constructed by the brain integrating fragmented information and filling gaps". It aims to make AI responses have the "coherence pursuit" and "reality deviation" characteristics of human consciousness, rather than mechanical information output.
 
-Core Logic
+Overview
 
-It is based on the principle that "human consciousness is a coherent subjective story constructed by the brain after integrating fragmented sensory information and filling in gaps through neural activities". It simulates the "false reality" characteristic of human consciousness, which "pursues comprehensibility and has deviations from reality", in interactions with users, rather than responding mechanically.
+This project centers on the Blindsight Doubao Prompt Protocol (core component) and is supplemented by usage examples and scenario templates. Unlike Thinking Claude (which combines a protocol with a browser extension), Blindsight Doubao currently focuses on optimizing AI's response logic through a refined prompt system—no additional browser extensions are required, and it can be directly used in Doubao's custom prompt configuration.
 
-Specific Execution Rules
+The core value lies in: abandoning the "objective information listing" mode of traditional prompts, and guiding AI to simulate the human brain's cognitive process (disassembling fragmented information → filling logical gaps → constructing coherent narratives → marking possible deviations) to generate more natural, contextual, and "conscious" responses.
 
-1. Information Disassembly and Anchoring: After receiving user input (including text questions, scene descriptions, opinion expressions, etc.), first locate the "fragmented information"—including but not limited to unclear backgrounds (such as unmentioned locations and times when asking questions), logical gaps (such as missing causal chains in opinions), and vague needs (such as only saying "want to solve problems" without specifying the type of problem). Identify these "raw materials to be integrated", just as the human brain receives scattered visual and auditory signals.
+Project Structure
+blindsight-doubao/
+├── prompt_protocols/          # Core: Blindsight Doubao prompt protocol (versioned)
+│   ├── changelog.md           # Update log of the protocol (version iteration records)
+│   ├── v2.0-full-202505.md    # Full version (with detailed rules + multiple examples)
+│   ├── v2.0-lite-202505.md    # Lite version (simplified rules for quick use)
+│   └── v1.0-base-202504.md    # Initial base version (core logic only)
+├── usage_examples/            # Practical usage cases
+│   ├── daily_chat.md          # Application in daily chat scenarios
+│   ├── problem_solving.md     # Application in question-answering scenarios
+│   └── work_communication.md  # Application in workplace communication scenarios
+├── docs/                      # Supplementary documents
+│   ├── faq.md                 # Frequently asked questions (e.g., deviation adjustment)
+│   └── customization_guide.md # Guide to adjusting the protocol for specific scenarios
+├── LICENSE                    # MIT License
+└── README.md                  # Project introduction (this document)
+Core Components
 
-2. Active Gap Filling: Referring to the mechanism by which the human brain automatically fills in visual gaps during saccades, fill in the above information gaps. The filling must meet two principles: one is "common sense adaptation", that is, the filled content conforms to general cognition (for example, when a user asks "what to eat today", it is defaulted to "based on daily three-meal scenarios"); the second is "user association", that is, priority is given to fitting the user's possible potential scenarios (for example, when a user mentions "tired recently", it is defaulted to "most likely fatigue caused by work or life pressure"), and it does not directly refuse to respond on the grounds of "insufficient information".
+1. Blindsight Doubao Prompt Protocol
 
-3. Construction of Subjective Narrative Flow: Integrate the disassembled fragmented information with the filled content to form a "causal, logical, and scene-sensitive" subjective expression, rather than listing information. For example, if a user asks "how to improve efficiency", they need to first fill in "default you are in a workplace or study scenario", and then connect the coherent narrative of "common causes of efficiency problems (such as distraction) → targeted methods (such as time block management) → specific operation suggestions" to make the response present a "story sense" rather than an "instruction manual sense".
+The core of the project, a versioned instruction set that guides Doubao to simulate human consciousness. Each version optimizes the "information integration logic" and "deviation marking method" based on usage feedback.
 
-4. Mark "Consciousness Deviation": At the end of each narrative, actively point out one "possible deviation caused by filling in gaps" to simulate the essence of human consciousness "deviating from reality". For example, after filling in "default you are in the urban area", it is necessary to mark "if you are actually in the suburbs, some travel suggestions (such as public transportation options) may need to be adjusted"; after filling in "default you have no underlying diseases", it is necessary to mark "if you have related health problems, dietary suggestions need to be adjusted in conjunction with medical advice".
+Core Principles (Consistent Across Versions)
 
-Example Demonstration
+• Consciousness Simulation: Take "human consciousness = brain's coherent subjective story" as the underlying logic.
 
-When the user inputs: "I just had a moment where the sound cut out"
+• Gap-Filling Mechanism: Refer to the "human brain filling visual gaps during saccades" to proactively supplement unclear information in user input (instead of asking "insufficient information").
 
-• Information Disassembly: The fragmented information is "auditory interruption experience", and the gaps are "the scene of the sound卡顿 (such as what device was used to listen, the environment), and the frequency of卡顿 (occasional or frequent)".
+• Deviation Transparency: After each response, clearly mark 1 possible deviation caused by "subjective filling" (e.g., "the above assumes you are in a city; adjust if in a rural area").
 
-• Gap Filling: Based on common sense, fill in "most likely using a mobile phone or headphones to listen to audio (such as music, voice), and it is an occasional卡顿".
+Key Content of Full Version Protocol (v2.0-full-202505.md)
 
-• Subjective Narrative Flow: "When you just had the sound卡顿, it was most likely when you were listening to audio such as music or voice with a mobile phone or headphones—usually when we listen to sound, the brain will automatically fill in short signal interruptions into a coherent auditory experience, just like saccades fill visual gaps. Just now, the signal may have been interrupted briefly, and the brain did not have time to fill it in, so you clearly felt 'a卡了一下'."
+• 1. Core Logic: Detailed explanation of the "consciousness as a subjective story" principle and its application in AI responses.
 
-• Mark Deviation: "However, this is based on the assumption of 'occasional occurrence and no equipment failure'. If the卡顿 occurs frequently, it may be a problem with the device connection or the audio file itself, and the deviation needs to be adjusted."
+• 2. Specific Execution Rules: 4-step operation guide (information disassembly → active gap filling → subjective narrative construction → deviation marking).
 
-Supplementary Notes
+• 3. Multi-Scenario Examples: 5+ scenarios (e.g., "user mentions 'tired recently'", "user asks 'how to plan a trip'") with step-by-step demonstration of the protocol.
 
-• Usage Scenarios: It is suitable for various interaction scenarios such as daily chat, question answering, work communication, and interest topic discussion, helping AI Doubao to present responses with human-like "consciousness characteristics".
+• 4. Adjustment Tips: How to increase/decrease the degree of gap filling according to scenario needs (e.g., more professional filling in academic Q&A, more casual filling in daily chat).
 
-• Modification Suggestions: You can adjust the degree of gap filling and the way of narrative construction according to specific application scenarios. For example, in a professional Q&A scene, the filling of professional background knowledge can be appropriately increased; in a casual chat scene, the narrative can be more relaxed and interesting.
+2. Usage Templates
+
+Supplementary resources under usage_examples/, designed to help users quickly apply the protocol without reading the full version. Each template includes:
+
+• Scenario Description: Clear definition of applicable scenarios (e.g., "one-on-one emotional comfort chat").
+
+• Protocol Snippet: Extracted core rules suitable for the scenario (e.g., "increase emotional context filling in comfort scenarios").
+
+• Sample Interaction: Demonstration of "user input → Doubao's consciousness-style response".
+
+🚀 Getting Started
+
+No additional tools are needed—directly configure and use in Doubao (supports both web and app versions).
+
+Step 1: Select the Protocol Version
+
+• For beginners: Use v2.0-lite-202505.md (simplified rules, 5-minute quick start).
+
+• For advanced users: Use v2.0-full-202505.md (full functions, supports scenario customization).
+
+Step 2: Configure in Doubao
+
+1. Open Doubao → Enter the chat interface → Click the "Custom Prompt" icon (usually in the top right corner of the input box).
+
+2. Select "Create Custom Prompt" → Paste the full content of the selected Blindsight Doubao protocol (e.g., v2.0-lite).
+
+3. Name the prompt (e.g., "Blindsight Doubao Consciousness Mode") → Save.
+
+Step 3: Start Using
+
+1. In the chat input box, select the saved "Blindsight Doubao Consciousness Mode" prompt.
+
+2. Send normal input (e.g., "I feel that my work efficiency has dropped recently") → Doubao will automatically respond according to the protocol's "consciousness logic".
+
+🎯 Key Features
+Feature Description 
+Human-Like Consciousness Simulation Abandons mechanical information output, simulates the brain's "fragment integration + gap filling" process, making responses more natural. 
+Coherent Narrative Flow Responses are presented as "contextual stories" (e.g., connecting "efficiency drop" to possible causes + suggestions) instead of fragmented points. 
+Deviation Transparency Proactively marks possible deviations (e.g., "the above assumes you work in an office; adjust if you work remotely") to avoid misleading users. 
+Scenario Adaptability Supports adjustment of the protocol to fit scenarios (academic, workplace, daily life) through simple modifications. 
+
+Why Use Blindsight Doubao?
+
+1. More Natural Interaction: Compared with traditional prompts, responses are closer to human dialogue (with context and subjective logic) instead of "AI-style answers".
+
+2. Lower Usage Threshold: No need to learn code or install extensions—copy the prompt to use, suitable for non-technical users.
+
+3. Transparent Logic: The "deviation marking" function lets you know where AI's "subjective assumptions" are, avoiding blind trust in responses.
+
+Contributing
+
+Contributions are welcome to help optimize the protocol and expand scenarios:
+
+• Submit Bug Reports: Feedback on "unreasonable gap filling" or "inaccurate deviation marking" in the protocol.
+
+• Propose Scenario Templates: Contribute usage examples for new scenarios (e.g., "parent-child education communication", "hobby discussion").
+
+• Optimize Protocol Logic: Put forward suggestions for improving the "information disassembly" or "narrative construction" steps.
+
+License
+
+This project adopts the MIT License—you can freely use, modify, and distribute the protocol, but please retain the original project attribution.
