@@ -9,7 +9,7 @@ The core value lies in: abandoning the "objective information listing" mode of t
 
 
 ## Project Structure
-'''
+```
 blindsight-doubao/
 ├── prompt_protocols/          # Core: Blindsight Doubao prompt protocol (versioned)
 │   ├── changelog.md           # Update log of the protocol (version iteration records)
@@ -25,7 +25,7 @@ blindsight-doubao/
 │   └── customization_guide.md # Guide to adjusting the protocol for specific scenarios
 ├── LICENSE                    # MIT License
 └── README.md                  # Project introduction (this document)
-'''
+```
 ## Core Components
 
 ### 1. Blindsight Doubao Prompt Protocol
