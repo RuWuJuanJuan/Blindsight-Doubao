@@ -9,6 +9,21 @@ The core value lies in: abandoning the "objective information listing" mode of t
 
 
 ## Project Structure
+blindsight-doubao/
+├── prompt_protocols/          # Core: Blindsight Doubao prompt protocol (versioned)
+│   ├── changelog.md           # Update log of the protocol (version iteration records)
+│   ├── v2.0-full-202505.md    # Full version (with detailed rules + multiple examples)
+│   ├── v2.0-lite-202505.md    # Lite version (simplified rules for quick use)
+│   └── v1.0-base-202504.md    # Initial base version (core logic only)
+├── usage_examples/            # Practical usage cases
+│   ├── daily_chat.md          # Application in daily chat scenarios
+│   ├── problem_solving.md     # Application in question-answering scenarios
+│   └── work_communication.md  # Application in workplace communication scenarios
+├── docs/                      # Supplementary documents
+│   ├── faq.md                 # Frequently asked questions (e.g., deviation adjustment)
+│   └── customization_guide.md # Guide to adjusting the protocol for specific scenarios
+├── LICENSE                    # MIT License
+└── README.md                  # Project introduction (this document)
 ## Core Components
 
 ### 1. Blindsight Doubao Prompt Protocol
